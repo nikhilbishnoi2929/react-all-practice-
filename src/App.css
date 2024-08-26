@@ -10,3 +10,9 @@
 .cross span:nth-child(3) {
   transform: rotate(-45deg) translateY(-13px) translateX(0px);
 }
+.hover_Effect:hover{
+  transform: scale(1.1);
+}
+.hover_Effect{
+  transition: all 500ms linear;
+}

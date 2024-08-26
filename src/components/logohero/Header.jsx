@@ -31,8 +31,8 @@ const Header = () => {
 
                             </ul>
                             <div className='flex gap-7 max-lg:gap-10'>
-                                <img className='cursor-pointer' src={circleFirst} alt="circleFirst" />
-                               <div className=' cursor-pointer'>
+                                <img className='cursor-pointer hover_Effect' src={circleFirst} alt="circleFirst" />
+                               <div className=' cursor-pointer hover_Effect'>
                                <CIRCLE_SECOND  />
                                </div>
                             </div>
@@ -56,7 +56,7 @@ const Header = () => {
                         </div>
                         <div className=' flex gap-7 pt-[35px] max-sm:pt-[28px]'>  
                             <button className=' font-lato font-semibold text-base leading-5 text-[#43BBFF] rounded-[58px] py-[14px] px-[24px] bg-white  hover:shadow-btnShadow border-[1px] border-transparent hover:border-white hover:text-white hover:bg-[#43BBFF] duration-500'>Sign up</button>
-                            <button className=' font-lato font-semibold text-base leading-5 text-white rounded-[58px] py-[14px] px-[24px] bg-[#43BBFF] hover:bg-white  hover:shadow-btnShadow  border-[1px] border-white hover:border-[#43BBFF] hover:text-[#43BBFF] hover:text-white  duration-500'>Login</button>
+                            <button className=' font-lato font-semibold text-base leading-5 text-white rounded-[58px] py-[14px] px-[24px] bg-[#43BBFF] hover:bg-[#43BBFF] hover:shadow-btnShadow  border-[1px] border-white hover:border-[#43BBFF] hover:text-[#43BBFF] hover:text-white  duration-500'>Login</button>
 
                         </div>
                     </div>

@@ -33,7 +33,7 @@ const Header = () => {
             <div className='bg-[#F5F5F5] '>
                 <div className=' container max-w-[1164px] mx-auto px-3 py-[26px]'>
                     <div className='flex justify-between items-center '>
-                        <h3 className=' font-lato font-bold text-[38px]  max-sm:text-[30px] leading-[45px] text-black'>Logo</h3>
+                        <h3 className=' font-lato font-bold text-[38px] pointer-events-none cursor-pointer max-sm:text-[30px] leading-[45px] text-black'>Logo</h3>
                         
                        <div  className={`${data ? "right-0" : "right-[-100%]"} flex gap-[139px] max-lg:gap-14 items-center justify-between z-[50] max-lg:fixed max-lg:bg-white max-lg:w-full max-lg:h-full max-xl:top-0 max-lg:flex-col max-lg:justify-center duration-300`}>
                             <ul className=' flex gap-[26px] max-lg:gap-14 items-center max-lg:flex-col'>
