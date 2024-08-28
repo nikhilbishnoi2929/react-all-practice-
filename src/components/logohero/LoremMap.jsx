@@ -1,6 +1,5 @@
 import React from 'react'
 import { CARD_MAP } from '../common/Helper'
-
 const LoremMap = () => {
   return (
     <div className='container max-w-[1164px] px-3 mx-auto '>
@@ -13,7 +12,7 @@ const LoremMap = () => {
                  <div className='bg-[#CFEEFF] duration-300 hover:shadow-btnShadow p-[20px_30px] rounded-[23px] max-w-[365px] border-[2px] border-[#FFFFFF]'>
                     <img className=' pointer-events-none' src={obj.img} alt="img" />
                     <h2 className='pt-8 font-inter font-semibold leading-6 text-[#101010]'>{obj.heading}</h2>
-                    <p className=' pt-4 max-w-[305px] font-inter font-light text-base leading-6 '>{obj.para}</p>
+                    <p className=' pt-4 max-w-[305px] font-inter font-light text-base leading-6 '>{obj.para} <span className=' font-semibold text-[#007AFF]'>{obj.readMore}</span></p>
                  </div>
                </div>
             ))}

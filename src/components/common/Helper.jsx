@@ -3,32 +3,38 @@ export const CARD_MAP = [
     {
         img: card_Image,
         heading: "Lorem ipsum",
-        para: "We have developed, capitalized, advised, and invested in $XXXmm of renewable energy projects over our careers. Read more"
+        para: "We have developed, capitalized, advised, and invested in $XXXmm of renewable energy projects over our careers.",
+        readMore:" Read more", 
     },
     {
         img: card_Image,
         heading: "Lorem ipsum",
-        para: "We have developed, capitalized, advised, and invested in $XXXmm of renewable energy projects over our careers. Read more"
+        para: "We have developed, capitalized, advised, and invested in $XXXmm of renewable energy projects over our careers.",
+        readMore:" Read more", 
     },
     {
         img: card_Image,
         heading: "Lorem ipsum",
-        para: "We have developed, capitalized, advised, and invested in $XXXmm of renewable energy projects over our careers. Read more"
+        para: "We have developed, capitalized, advised, and invested in $XXXmm of renewable energy projects over our careers. ",
+        readMore:" Read more", 
     },
     {
         img: card_Image,
         heading: "Lorem ipsum",
-        para: "We have developed, capitalized, advised, and invested in $XXXmm of renewable energy projects over our careers. Read more"
+        para: "We have developed, capitalized, advised, and invested in $XXXmm of renewable energy projects over our careers.",
+        readMore:" Read more", 
     },
     {
         img: card_Image,
         heading: "Lorem ipsum",
-        para: "We have developed, capitalized, advised, and invested in $XXXmm of renewable energy projects over our careers. Read more"
+        para: "We have developed, capitalized, advised, and invested in $XXXmm of renewable energy projects over our careers."
+        ,readMore:" Read more", 
     },
     {
         img: card_Image,
         heading: "Lorem ipsum",
-        para: "We have developed, capitalized, advised, and invested in $XXXmm of renewable energy projects over our careers. Read more"
+        para: "We have developed, capitalized, advised, and invested in $XXXmm of renewable energy projects over our careers. ",
+        readMore:" Read more", 
     },
 ]
 export const ABOUT_WEBSITE = [
