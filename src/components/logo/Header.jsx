@@ -65,9 +65,11 @@ const Header = () => {
                                     </li>
                                 ))}
                             </ul>
-                            <div className='flex head max-lg:gap-10 gap-6 max-lg:flex-col'>
-                                <button className='bg-white font-lato font-semibold text-base leading-5 hover:text-white hover:bg-[#FF5501] duration-500  text-[#FF5501] border-[1px] border-[#FF5501] p-[14px_24px] rounded-[14px]'>Login</button>
+                            <div className='flex  max-lg:gap-10 gap-6 max-lg:flex-col'>
+                                <button className='bg-white head font-lato font-semibold text-base leading-5 hover:text-white hover:bg-[#FF5501] duration-500  text-[#FF5501] border-[1px] border-[#FF5501] p-[14px_24px] rounded-[14px]'>Login</button>
+                                <div className="head">
                                 <Commonbtn button="Sign up" />
+                                </div>
                             </div>
                         </div>
                         <div onClick={VIEW} className={`${data ? "cross" : ""} lg:hidden cursor-pointer block z-50`}>

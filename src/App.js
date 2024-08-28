@@ -7,7 +7,7 @@ function App() {
     <div className=' overflow-hidden'>
       <BrowserRouter>
         <Routes>
-          <Route path='' element={<LogoFirst />} />
+          <Route path='/' element={<LogoFirst />} />
           <Route path='/LogoSecond' element={<LogoSecond />} />
         </Routes>
       </BrowserRouter>

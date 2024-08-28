@@ -8,7 +8,7 @@ const LogoSecond = () => {
  <>
  <Header/>
  <LoremMap/>
- <Footer backgroundColor='bg-[#002B43] rounded-none' text_color=' text-[#007AFF]'/>
+ <Footer backgroundColor='bg-[#002B43] rounded-none'/>
  <BottomTop/>
  </>
   )

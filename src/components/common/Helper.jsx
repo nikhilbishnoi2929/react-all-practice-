@@ -67,10 +67,10 @@ export const FOLLOW_LINKS = [
 ]
 export const Nav_TEXT = [
     {
-      path:"/LogoSecond",  label: "Home"
+      path:"/",  label: "Home"
     },
     {
-        path:"/", label: "How It Works"
+        path:"/LogoSecond", label: "How It Works"
     },
     {
         path:"/", label: "Testimonials"
