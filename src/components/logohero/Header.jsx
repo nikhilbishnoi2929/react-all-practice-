@@ -5,7 +5,33 @@ import Commonheading from '../common/Commonheading'
 import Commonpara from '../common/Commonpara'
 import { NAV_HOME } from '../common/Helper'
 import { Link } from 'react-router-dom'
+import { gsap } from 'gsap';
+import ScrollTrigger from 'gsap/ScrollTrigger';
+gsap.registerPlugin(ScrollTrigger);
 const Header = () => {
+    useEffect(() => {
+        gsap.fromTo(
+            '.head',
+            {
+                y: -100,
+                opacity: 0,
+                duration: 1,
+            },
+            {
+                y: 0,
+                opacity: 1,
+                duration: 1,
+                ease: 'power3.out',
+                delay: 0.3,
+                stagger: 0.5,
+                scrollTrigger: {
+                    trigger: '.head',
+                    start: 'top center',
+                    end: 'bottom 50%',
+                },
+            }
+        );
+    }, []);
     const [data, setData] = useState(false);
     useEffect(() => {
         document.body.style.overflow = data ? "hidden" : "visible";
@@ -21,14 +47,16 @@ const Header = () => {
             <div className='border-[#00000012] border-[1px] shadow-headerShadow'>
                 <div className='container max-w-[1164px] mx-auto px-3'>
                     <nav className='py-[26px] flex justify-between items-center '>
-                        <h2 className='font-lato cursor-pointer font-bold max-sm:text-[30px] text-[38px] leading-[45px] text-white '>Logo Here</h2>
+                        <h2 className='font-lato head cursor-pointer font-bold max-sm:text-[30px] text-[38px] leading-[45px] text-white '>Logo Here</h2>
                         <div className={`${data ? "right-0" : "right-[-100%]"} flex gap-[67px] max-lg:gap-14 items-center justify-between z-[50] max-lg:fixed max-lg:bg-black max-lg:w-full max-lg:h-full max-xl:top-0 max-lg:flex-col max-lg:justify-center duration-300`}>
                             <ul className='flex gap-[46px] max-lg:gap-14 items-center max-lg:flex-col'>
                                 {NAV_HOME.map((obj, index) => (
+                                    <li key={index} className='head '>
                                     <Link to={obj.path} className='max-lg:text-xl font-rubik font-medium text-base leading-[18px] text-white '>{obj.label}</Link>
+                                    </li>
                                 ))}
                             </ul>
-                            <div className='flex gap-7 max-lg:gap-10'>
+                            <div className='flex head gap-7 max-lg:gap-10'>
                                 <img className='cursor-pointer hover_Effect' src={circleFirst} alt="circleFirst" />
                                <div className='cursor-pointer hover_Effect'>
                                <CIRCLE_SECOND />

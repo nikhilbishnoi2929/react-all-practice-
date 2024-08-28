@@ -5,7 +5,33 @@ import Commonpara from '../common/Commonpara'
 import { SEARCH_ICON } from '../common/Icon'
 import { Nav_TEXT } from '../common/Helper'
 import { Link } from 'react-router-dom'
+import { gsap } from 'gsap';
+import ScrollTrigger from 'gsap/ScrollTrigger';
+gsap.registerPlugin(ScrollTrigger);
 const Header = () => {
+    useEffect(() => {
+        gsap.fromTo(
+            '.head',
+            {
+                y: -100,
+                opacity: 0,
+                duration: 1,
+            },
+            {
+                y: 0,
+                opacity: 1,
+                duration: 1,
+                ease: 'power3.out',
+                delay: 0.3,
+                stagger: 0.5,
+                scrollTrigger: {
+                    trigger: '.head',
+                    start: 'top center',
+                    end: 'bottom 50%',
+                },
+            }
+        );
+    }, []);
     const [data, setData] = useState(false);
     useEffect(() => {
         document.body.style.overflow = data ? "hidden" : "visible";
@@ -15,9 +41,8 @@ const Header = () => {
     }, [data]);
     function VIEW() {
         setData(prevData => !prevData);
-        
-    } const [query, setQuery] = useState('');
 
+    } const [query, setQuery] = useState('');
     const handleInputChange = (event) => {
         setQuery(event.target.value);
     };
@@ -31,25 +56,25 @@ const Header = () => {
             <div className='bg-[#F5F5F5] '>
                 <div className='container max-w-[1164px] mx-auto px-3 py-[26px]'>
                     <div className='flex justify-between items-center '>
-                        <h3 className='font-lato font-bold text-[38px] pointer-events-none cursor-pointer max-sm:text-[30px] leading-[45px] text-black'>Logo</h3>   
-                       <div  className={`${data ? "right-0" : "right-[-100%]"} flex gap-[139px] max-lg:gap-14 items-center justify-between z-[50] max-lg:fixed max-lg:bg-white max-lg:w-full max-lg:h-full max-xl:top-0 max-lg:flex-col max-lg:justify-center duration-300`}>
+                        <h3 className='font-lato head font-bold text-[38px] pointer-events-none cursor-pointer max-sm:text-[30px] leading-[45px] text-black'>Logo</h3>
+                        <div className={`${data ? "right-0" : "right-[-100%]"} flex gap-[139px] max-lg:gap-14 items-center justify-between z-[50] max-lg:fixed max-lg:bg-white max-lg:w-full max-lg:h-full max-xl:top-0 max-lg:flex-col max-lg:justify-center duration-300`}>
                             <ul className='flex gap-[26px] max-lg:gap-14 items-center max-lg:flex-col'>
                                 {Nav_TEXT.map((obj, index) => (
-                                    <div key={index}>
+                                    <li key={index} className='  head' onClick={VIEW}>
                                         <Link to={obj.path} className='font-lato text-base max-lg:text-xl font-medium text-black leading-5 hover:text-[#FF5501] '>{obj.label}</Link>
-                                    </div>
+                                    </li>
                                 ))}
                             </ul>
-                            <div className='flex max-lg:gap-10 gap-6 max-lg:flex-col'>
+                            <div className='flex head max-lg:gap-10 gap-6 max-lg:flex-col'>
                                 <button className='bg-white font-lato font-semibold text-base leading-5 hover:text-white hover:bg-[#FF5501] duration-500  text-[#FF5501] border-[1px] border-[#FF5501] p-[14px_24px] rounded-[14px]'>Login</button>
                                 <Commonbtn button="Sign up" />
                             </div>
                         </div>
-                            <div onClick={VIEW} className={`${data ? "cross" : ""} lg:hidden cursor-pointer block z-50`}>
-                                <span className="bar h-[3px] block cursor-pointer bg-black w-[25px] custom_duration"></span>
-                                <span className="bar h-[3px] block cursor-pointer bg-black w-[25px] my-[6px]"></span>
-                                <span className="bar h-[3px] block cursor-pointer bg-black w-[25px] custom_duration"></span>
-                            </div> 
+                        <div onClick={VIEW} className={`${data ? "cross" : ""} lg:hidden cursor-pointer block z-50`}>
+                            <span className="bar h-[3px] block cursor-pointer bg-black w-[25px] custom_duration"></span>
+                            <span className="bar h-[3px] block cursor-pointer bg-black w-[25px] my-[6px]"></span>
+                            <span className="bar h-[3px] block cursor-pointer bg-black w-[25px] custom_duration"></span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -64,14 +89,14 @@ const Header = () => {
                                     <SEARCH_ICON />
                                     <input type="text" placeholder='Search' value={query} onChange={handleInputChange} className='outline-none bg-transparent w-full font-lato font-normal text-base leading-5 text-black opacity-[0.52]' />
                                 </div>
-                               <div className=' max-sm:hidden'>
-                                <div onClick={handleSearch}>
-                                <Commonbtn button="Start" />
-                                </div> 
-                               </div>
+                                <div className=' max-sm:hidden'>
+                                    <div onClick={handleSearch}>
+                                        <Commonbtn button="Start" />
+                                    </div>
+                                </div>
                             </div>
                             <div className='sm:hidden pt-8'>
-                            <Commonbtn button="Start" />
+                                <Commonbtn button="Start" />
                             </div>
                         </div>
                     </div>
