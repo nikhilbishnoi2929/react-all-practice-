@@ -16,3 +16,16 @@
 .hover_Effect{
   transition: all 500ms linear;
 }
+.swiper-slider{
+  margin-right: 10px !important;
+}
+.cardHover:hover  path{
+  fill: white !important;
+}
+.swiper-button-next, .swiper-rtl .swiper-button-prev {
+  right: var(--swiper-navigation-sides-offset, -80px) !important;
+  left: auto;
+}
+ .NextBtn path{
+  fill: #535353 !important;
+}

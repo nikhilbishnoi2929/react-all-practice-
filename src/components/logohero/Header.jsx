@@ -52,15 +52,15 @@ const Header = () => {
                             <ul className='flex gap-[46px] max-lg:gap-14 items-center max-lg:flex-col'>
                                 {NAV_HOME.map((obj, index) => (
                                     <li key={index} className='head '>
-                                    <Link to={obj.path} className='max-lg:text-xl font-rubik font-medium text-base leading-[18px] text-white '>{obj.label}</Link>
+                                        <Link to={obj.path} className='max-lg:text-xl font-rubik font-medium text-base leading-[18px] text-white '>{obj.label}</Link>
                                     </li>
                                 ))}
                             </ul>
                             <div className='flex head gap-7 max-lg:gap-10'>
                                 <img className='cursor-pointer hover_Effect' src={circleFirst} alt="circleFirst" />
-                               <div className='cursor-pointer hover_Effect'>
-                               <CIRCLE_SECOND />
-                               </div>
+                                <div className='cursor-pointer hover_Effect'>
+                                    <CIRCLE_SECOND />
+                                </div>
                             </div>
                         </div>
                         <div onClick={VIEW} className={`${data ? "cross" : ""} lg:hidden cursor-pointer block z-50`}>
