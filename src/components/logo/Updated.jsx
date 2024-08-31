@@ -1,5 +1,6 @@
 import React from 'react';
-import laptop_Contact from '../../assets/images/png/laptopContact.png'
+import laptop_Contact from '../../assets/images/png/laptopContact.png';
+import 'animate.css';
 const Updated = () => {
     return (
         <div className='container max-w-[1124px] px-3 mx-auto py-[155px] max-sm:py-12 max-md:py-20 max-lg:py-24'>
@@ -9,7 +10,7 @@ const Updated = () => {
                 </div>
                 <div className='w-full lg:w-8/12 px-3 flex lg:justify-end justify-center max-lg:pt-12' >
                     <div className='w-full max-w-[674px] flex flex-col '>
-                        <h3 className='font-bold font-late text-5xl max-sm:text-3xl max-sm:leading-[34px] max-md:text-4xl max-md:leading-[45px] leading-[60px] text-[#111111]'>Get Updated With Us</h3>
+                        <h3 className='font-bold animate__animated animate__bounce animate__delay-2s font-late text-5xl max-sm:text-3xl max-sm:leading-[34px] max-md:text-4xl max-md:leading-[45px] leading-[60px] text-[#111111]'>Get Updated With Us</h3>
                         <p className='max-w-[578px] font-lato font-normal text-base leading-6 text-black opacity-[0.6] pt-4'>
                             The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli.
                         </p>

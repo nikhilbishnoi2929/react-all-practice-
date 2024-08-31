@@ -1,33 +1,37 @@
 import card_Image from '../../assets/images/svg/carbon_partnership.svg'
-export const SLIDERONE = [
+export const SLIDERONE = [ 
     {
         heading: "Lorem ipsum",
-        para: "We have developed, capitalized, advised, and invested in $XXXmm of renewable energy projects over our careers. Read more"
+        para: "We have developed, capitalized, advised, and invested in $XXXmm of renewable energy projects over our careers.",
+        link: " Read more"
     },
     {
         heading: "Lorem ipsum",
-        para: "We have developed, capitalized, advised, and invested in $XXXmm of renewable energy projects over our careers. Read more"
+        para: "We have developed, capitalized, advised, and invested in $XXXmm of renewable energy projects over our careers.",
+         link: " Read more"
     },
     {
         heading: "Lorem ipsum",
-        para: "We have developed, capitalized, advised, and invested in $XXXmm of renewable energy projects over our careers. Read more"
+        para: "We have developed, capitalized, advised, and invested in $XXXmm of renewable energy projects over our careers.",
+         link: " Read more"
     },
 
     {
         heading: "Lorem ipsum",
-        para: "We have developed, capitalized, advised, and invested in $XXXmm of renewable energy projects over our careers. Read more"
+        para: "We have developed, capitalized, advised, and invested in $XXXmm of renewable energy projects over our careers.",
+         link: " Read more"
     }, {
         heading: "Lorem ipsum",
-        para: "We have developed, capitalized, advised, and invested in $XXXmm of renewable energy projects over our careers. Read more"
+        para: "We have developed, capitalized, advised, and invested in $XXXmm of renewable energy projects over our careers.",
+         link: " Read more"
     },
-
 ]
 export const CARD_MAP = [
     {
         img: card_Image,
         heading: "Lorem ipsum",
         para: "We have developed, capitalized, advised, and invested in $XXXmm of renewable energy projects over our careers.",
-        readMore: " Read more",
+        readMore: "Read more",
     },
     {
         img: card_Image,
@@ -96,7 +100,7 @@ export const Nav_TEXT = [
         path: "/LogoSecond", label: "How It Works"
     },
     {
-        path: "/", label: "Testimonials"
+        path: "/animate", label: "Animate"
     },
     {
         path: "/", label: " Why Choose Us"

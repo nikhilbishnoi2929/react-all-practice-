@@ -7,6 +7,11 @@ import { Nav_TEXT } from '../common/Helper'
 import { Link } from 'react-router-dom'
 import { gsap } from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
+import third from '../../assets/lottie/Ani_mation.json';
+import animationTree from '../../assets/lottie/AnimationTrue.json'
+import Lottie from 'lottie-react';
+import 'animate.css';
+
 gsap.registerPlugin(ScrollTrigger);
 const Header = () => {
     useEffect(() => {
@@ -31,6 +36,22 @@ const Header = () => {
                 },
             }
         );
+        gsap.fromTo(
+            '.CarAnimtion',
+            {
+                left: "0px",
+                bottom: "10px",
+                duration: 6,
+            },
+            {
+                left: "1500px",
+                bottom: "10px",
+                x: 0,
+                duration: 6,
+                ease: 'power3.out',
+                repeat: -1
+            }
+        );
     }, []);
     const [data, setData] = useState(false);
     useEffect(() => {
@@ -52,7 +73,7 @@ const Header = () => {
         }
     };
     return (
-        <div className='bg-gradient-to-r from-[#FF722E] to-[#DC5260] rounded-[0px_0px_30px_30px]'>
+        <div className='bg-gradient-to-r from-[#FF722E] to-[#DC5260] rounded-[0px_0px_30px_30px] relative'>
             <div className='bg-[#F5F5F5] '>
                 <div className='container max-w-[1164px] mx-auto px-3 py-[26px]'>
                     <div className='flex justify-between items-center '>
@@ -68,7 +89,7 @@ const Header = () => {
                             <div className='flex  max-lg:gap-10 gap-6 max-lg:flex-col'>
                                 <button className='bg-white head font-lato font-semibold text-base leading-5 hover:text-white hover:bg-[#FF5501] duration-500  text-[#FF5501] border-[1px] border-[#FF5501] p-[14px_24px] rounded-[14px]'>Login</button>
                                 <div className="head">
-                                <Commonbtn button="Sign up" />
+                                    <Commonbtn button="Sign up" />
                                 </div>
                             </div>
                         </div>
@@ -83,9 +104,13 @@ const Header = () => {
             <div className='container max-w-[1164px] mx-auto px-3 '>
                 <div className='flex justify-center pt-[160px] pb-[261px] max-sm:pb-[200px]'>
                     <div className=' flex flex-col items-center text-center'>
-                        <Commonheading heading="Lorem ipsum dolor sit amet consectetur. Sceleris" />
-                        <div className="pt-[20px]" >
-                            <Commonpara para="Lorem ipsum dolor sit amet consectetur. Id mattis at tristique duis." />
+                        <div className="animate__animated animate__bounce ">
+                            <Commonheading heading="Lorem ipsum dolor sit amet consectetur. Sceleris" />
+                        </div>
+                        <div className="pt-[20px] " >
+                           <div className=' animate__animated animate__flash'>
+                           <Commonpara className="" para="Lorem ipsum dolor sit amet consectetur. Id mattis at tristique duis." />
+                           </div>
                             <div className=' max-w-[435px] mt-10 rounded-[15px] p-[7px_21px] bg-[#E9E9E9] border-[1px] border-[#BDBDBD] flex justify-between items-center'>
                                 <div className=' flex gap-5 items-center'>
                                     <SEARCH_ICON />
@@ -104,6 +129,11 @@ const Header = () => {
                     </div>
                 </div>
             </div>
+            <div className='    '>
+            <Lottie animationData={third} className='absolute overflow-hidden CarAnimtion  size-1/4' />
+            </div>
+            <Lottie animationData={animationTree} loop={true} className='size-2/4 absolute bottom-[10%] left-[-10%]' />
+            <Lottie animationData={animationTree} loop={true} className='size-2/4 absolute bottom-[10%] right-[-10%]' />
         </div>
     )
 }

@@ -7,6 +7,7 @@ import { NAV_HOME } from '../common/Helper'
 import { Link } from 'react-router-dom'
 import { gsap } from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
+import 'animate.css';
 gsap.registerPlugin(ScrollTrigger);
 const Header = () => {
     useEffect(() => {
@@ -31,6 +32,7 @@ const Header = () => {
                 },
             }
         );
+        
     }, []);
     const [data, setData] = useState(false);
     useEffect(() => {
@@ -43,7 +45,7 @@ const Header = () => {
         setData(prevData => !prevData);
     }
     return (
-        <div className='bg-[#01A4FFBD] '>
+        <div className='bg-[#01A4FFBD] relative'>
             <div className='border-[#00000012] border-[1px] shadow-headerShadow'>
                 <div className='container max-w-[1164px] mx-auto px-3'>
                     <nav className='py-[26px] flex justify-between items-center '>
@@ -73,9 +75,11 @@ const Header = () => {
             </div>
             <div className='container max-w-[1164px] mx-auto px-3 '>
                 <div className='flex justify-center pt-[160px] pb-[261px] max-sm:pt-[120px] max-sm:pb-[160px]'>
-                    <div className=' flex flex-col items-center text-center'>
-                        <Commonheading heading="Lorem ipsum dolor sit amet consectetur. Sceleris" />
-                        <div className="pt-[20px]" >
+                    <div className=' flex flex-col items-center text-center '>
+                         <div className=' animate__animated animate__bounce'>
+                         <Commonheading heading="Lorem ipsum dolor sit amet consectetur. Sceleris" />
+                         </div>
+                        <div className="pt-[20px] animate__animated animate__rubberBand" >
                             <Commonpara para="Lorem ipsum dolor sit amet consectetur. Id mattis at tristique duis." />
                         </div>
                         <div className='flex gap-7 pt-[35px] max-sm:pt-[28px]'>
@@ -85,6 +89,7 @@ const Header = () => {
                     </div>
                 </div>
             </div>
+                
         </div>
     )
 }
