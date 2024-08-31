@@ -12,7 +12,7 @@ const LottiePractice = () => {
       <button className=' py-2 px-3 rounded-lg bg-white'>home</button>
       </Link>
       </div>
-     <div className='flex itmes-center'>
+     <div className='flex items-center'>
       <Lottie animationData={animationCar} className='size-2/4'/>
       <Lottie animationData={animationTree} loop={true} className='size-2/4' /> 
      </div>
