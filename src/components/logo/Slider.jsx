@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { SLIDERONE } from '../common/Helper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
@@ -6,9 +6,34 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import { NextBtn, PrevBtn, SliderSvg } from '../common/Icon';
 import { Navigation, Pagination } from 'swiper/modules';
-
+import third from '../../assets/lottie/AnimationCar.json';
+import Lottie from 'lottie-react';
+import { gsap } from 'gsap';
+import ScrollTrigger from 'gsap/ScrollTrigger';
 
 const Slider = () => {
+    useEffect(() => {
+        gsap.fromTo(
+            '.Car__Animtion',
+            {
+                right: "0px",
+                bottom: "-40%",
+                duration: 9,
+            },
+            {
+                right: "2000px",
+                bottom: "-40%",
+                duration: 9,
+                ease: 'power3.out',
+                repeat: -1,
+                scrollTrigger: {
+                    trigger: '.Car__Animtion',
+                    start: 'top 95%',
+                    end: 'bottom 50%',
+                },
+            }
+        );
+    }, []);
     return (
         <div className='relative'>
             <div className='container mx-auto px-3 max-w-[1164px] pt-[135px]'>
@@ -47,6 +72,7 @@ const Slider = () => {
                     </div>
                 </div>
             </div>
+            <Lottie animationData={third} className='absolute overflow-hidden Car__Animtion  size-2/4' />
         </div>
     );
 }
