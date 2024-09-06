@@ -10,22 +10,125 @@
 .cross span:nth-child(3) {
   transform: rotate(-45deg) translateY(-13px) translateX(0px);
 }
-.hover_Effect:hover{
+
+.hover_Effect:hover {
   transform: scale(1.1);
 }
-.hover_Effect{
+
+.hover_Effect {
   transition: all 500ms linear;
 }
-.swiper-slider{
+
+.swiper-slider {
   margin-right: 10px !important;
 }
-.cardHover:hover  path{
+
+.cardHover:hover path {
   fill: white !important;
 }
-.swiper-button-next, .swiper-rtl .swiper-button-prev {
+
+.swiper-button-next,
+.swiper-rtl .swiper-button-prev {
   right: var(--swiper-navigation-sides-offset, -80px) !important;
   left: auto;
 }
- .NextBtn path{
+
+.NextBtn path {
   fill: #535353 !important;
+}
+
+.circle_1 {
+  position: absolute;
+  animation-timing-function: ease-in-out;
+}
+
+.circle_1 {
+  background-color: gray;
+  animation: useKey 10s infinite alternate;
+}
+
+.circle_2 {
+  position: relative;
+  animation: move 10s infinite alternate;
+}
+
+.circle_3 {
+  position: relative;
+  animation: moving 10s infinite alternate;
+}
+.circle_4 {
+  position: relative;
+  animation: circle4 10s infinite alternate;
+}
+@keyframes moving {
+  0% {
+    transform: translate( 1300px,-100px);
+  }
+  50% {
+    transform: translate( 100px,100px);
+  }
+  50% {
+    transform: translateY( 100px);
+  }
+  100% {
+    transform: translate( 1300px, 200px);
+  }
+   
+}
+@keyframes circle4 {
+  0% {
+    transform: translate(1300px, 500px);
+  }
+
+  30% {
+    transform: translate(1300px, 0px);
+  }
+
+  60% {
+    transform: translate(900px, 0);
+  }
+
+  80% {
+    transform: translate(900px, 500px);
+  }
+}
+@keyframes move {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  30% {
+    transform: translate(0, 400px);
+  }
+
+  60% {
+    transform: translate(900px, 0);
+  }
+
+  100% {
+    transform: translate(0px, 600%);
+  }
+}
+
+@keyframes useKey {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  25% {
+    transform: translate(calc(1000px), 0);
+  }
+
+  50% {
+    transform: translate(calc(1000px), calc(700px));
+    background-color: black;
+  }
+
+  75% {
+    transform: translate(0, calc(700px));
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
 }

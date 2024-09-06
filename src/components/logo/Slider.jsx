@@ -63,7 +63,7 @@ const Slider = () => {
                         </SwiperSlide>
                     ))}
                 </Swiper>
-                <div className='absolute bottom-[-30px] left-[48%] flex items-center gap-[26px] '>
+                <div className='absolute z-40 bottom-[-30px] left-[48%] flex items-center gap-[26px] '>
                     <div className='custom-prev-button cursor-pointer'>
                         <PrevBtn />
                     </div>

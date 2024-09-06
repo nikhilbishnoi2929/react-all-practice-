@@ -103,7 +103,7 @@ export const Nav_TEXT = [
         path: "/animate", label: "Animate"
     },
     {
-        path: "/", label: " Why Choose Us"
+        path: "/Keyframes", label: "Keyframes"
     }
 ]
 export const NAV_HOME = [
