@@ -56,25 +56,159 @@
   position: relative;
   animation: moving 10s infinite alternate;
 }
+
 .circle_4 {
   position: relative;
   animation: circle4 10s infinite alternate;
 }
+
+.circle_5 {
+  position: absolute;
+  animation: circle5 30s infinite linear;
+  animation-delay: 9;
+}
+
+.circle_6 {
+  position: absolute;
+  animation: circle6 30s infinite linear;
+  animation-delay: 9;
+}
+
+.circle_7 {
+  position: absolute;
+  animation: circle7 30s infinite linear;
+  animation-delay: 9;
+}
+.box_1{
+  position: absolute;
+  animation: box1 30s infinite linear;
+  animation-delay: 9;
+}
+@keyframes box1 {
+  0%{
+transform: rotate(0);
+top:0;
+left:0
+  }
+  50%{
+    transform: rotate(360deg);
+    top: 90%;
+    left: 90%;
+  }
+}
+@keyframes circle7 {
+  0% {
+    left: 0;
+    top: 0
+  }
+
+  20% {
+    top: 84%;
+    left: 15%;
+  }
+
+  40% {
+    top: 0;
+    left: 30%;
+  }
+
+  60% {
+    top: 84%;
+    left: 45%;
+  }
+  80%{
+    top: 0%;
+    left: 60%;
+  }
+  90%{
+    top: 84%;
+    left: 75%;
+  }
+  100%{
+    top: 0%;
+    left: 90%;
+  }
+}
+
+@keyframes circle6 {
+  0% {
+    left: 0;
+    top: 0%;
+  }
+
+  25% {
+    left: 0;
+    top: 84%;
+    background: blue;
+  }
+
+  50% {
+    left: 92%;
+    top: 84%;
+    background: gray;
+  }
+
+  75% {
+    left: 92%;
+    top: 0;
+  }
+
+  100% {
+    left: 0;
+    top: 0%;
+  }
+}
+
+@keyframes circle5 {
+  0% {
+    left: 0;
+    top: 0%;
+  }
+
+  25% {
+    left: 92%;
+    background: red;
+    top: 0;
+  }
+
+  50% {
+    left: 92%;
+    top: 84%;
+    background: pink;
+  }
+
+  75% {
+    left: 0;
+    top: 84%;
+    background: blue;
+  }
+
+  100% {
+    left: 0;
+    top: 0%;
+  }
+
+}
+
 @keyframes moving {
   0% {
-    transform: translate( 1300px,-100px);
+    transform: translate(1300px, -100px);
   }
+
   50% {
-    transform: translate( 100px,100px);
+    transform: translate(100px, 100px);
   }
+
   50% {
-    transform: translateY( 100px);
+    transform: translateY(100px);
   }
+
   100% {
-    transform: translate( 1300px, 200px);
+    transform: translate(1300px, 200px);
   }
-   
+
 }
+
 @keyframes circle4 {
   0% {
     transform: translate(1300px, 500px);
@@ -92,6 +226,7 @@
     transform: translate(900px, 500px);
   }
 }
+
 @keyframes move {
   0% {
     transform: translate(0, 0);
