@@ -32,7 +32,6 @@ const Header = () => {
     }
   );
 }, []);
-
     const [data, setData] = useState(false);
     useEffect(() => {
         document.body.style.overflow = data ? "hidden" : "visible";
@@ -85,10 +84,9 @@ const Header = () => {
                             <button className='font-lato font-semibold text-base leading-5 text-[#43BBFF] rounded-[58px] py-[14px] px-[24px] bg-white hover:shadow-btnShadow border-[1px] border-transparent hover:border-white hover:text-white hover:bg-[#43BBFF] duration-500'>Sign up</button>
                             <button className='font-lato font-semibold text-base leading-5 text-white rounded-[58px] py-[14px] px-[24px] bg-[#43BBFF] hover:bg-[#43BBFF] hover:shadow-btnShadow border-[1px] border-white hover:border-[#43BBFF] duration-500'>Login</button>
                         </div>
-                    </div>
-                </div>
+                     </div>
+                 </div>
             </div>
-                
         </div>
     )
 }

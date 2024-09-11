@@ -15,11 +15,10 @@ const LoremMap = () => {
                     <h2 className='pt-8 font-inter font-semibold leading-6 text-[#101010]'>{obj.heading}</h2>
                     <p className='pt-4 max-w-[305px] font-inter font-light text-base leading-6 '>{obj.para} <span className=' font-semibold text-[#007AFF]'>{obj.readMore}</span></p>
                  </div>
-                </div>
+                 </div>
             ))}
       </div>
     </div>
   )
 }
-
 export default LoremMap
