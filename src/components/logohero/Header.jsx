@@ -33,7 +33,6 @@ const Header = () => {
   );
 }, []);
 
-
     const [data, setData] = useState(false);
     useEffect(() => {
         document.body.style.overflow = data ? "hidden" : "visible";
