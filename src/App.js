@@ -7,12 +7,12 @@ import KeyAnimate from './components/views/KeyAnimate';
 function App() {
   return (
     <div className=' overflow-hidden'>
-      <BrowserRouter>
+      <BrowserRouter>  
         <Routes>
-          <Route path='/' element={<LogoFirst />} />
-          <Route path='/LogoSecond' element={<LogoSecond />} />
-          <Route path='/animate' element={<Animate />} />
-          <Route path='/keyframes' element={<KeyAnimate />}/>
+           <Route path='/' element={<LogoFirst />} />
+           <Route path='/LogoSecond' element={<LogoSecond />} />
+           <Route path='/animate' element={<Animate />} />
+           <Route path='/keyframes' element={<KeyAnimate />}/>
         </Routes>
       </BrowserRouter>
     </div>
