@@ -11,29 +11,29 @@ import 'animate.css';
 gsap.registerPlugin(ScrollTrigger);
 const Header = () => {
     useEffect(() => {
-        gsap.fromTo(
-            '.head',
-            {
-                y: -100,
-                opacity: 0,
-                duration: 1,
-            },
-            {
-                y: 0,
-                opacity: 1,
-                duration: 1,
-                ease: 'power3.out',
-                delay: 0.3,
-                stagger: 0.5,
-                scrollTrigger: {
-                    trigger: '.head',
-                    start: 'top center',
-                    end: 'bottom 50%',
-                },
-            }
-        );
-        
-    }, []);
+  gsap.fromTo(
+    '.hero-item',
+    {
+      y: -100,
+      opacity: 0,
+    },
+    {
+      y: 0,
+      opacity: 1,
+      duration: 1,
+      ease: 'power3.out',
+      delay: 0.3,
+      stagger: 0.5,
+      scrollTrigger: {
+        trigger: '.hero-item',
+        start: 'top center',
+        end: 'bottom 50%',
+      },
+    }
+  );
+}, []);
+
+
     const [data, setData] = useState(false);
     useEffect(() => {
         document.body.style.overflow = data ? "hidden" : "visible";
