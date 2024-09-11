@@ -3,9 +3,8 @@ import LottiePractice from '../animation/LottiePractice'
 const Animate = () => {
     return (
         <>
-            <LottiePractice />
+       <LottiePractice />
         </>
     )
 }
-
 export default Animate

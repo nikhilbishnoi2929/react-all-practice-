@@ -7,7 +7,6 @@ import KeyAnimate from './components/views/KeyAnimate';
 function App() {
   return (
     <div className=' overflow-hidden'>
-      
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<LogoFirst />} />
@@ -17,7 +16,6 @@ function App() {
         </Routes>
       </BrowserRouter>
     </div>
-
   );
 }
 export default App;

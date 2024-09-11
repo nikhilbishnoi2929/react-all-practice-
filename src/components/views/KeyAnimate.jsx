@@ -1,6 +1,5 @@
 import React from 'react'
 import AnimationKey from '../keyFrames/AnimationKey'
-
 const KeyAnimate = () => {
   return (
     <div>
@@ -8,5 +7,4 @@ const KeyAnimate = () => {
     </div>
   )
 }
-
 export default KeyAnimate
